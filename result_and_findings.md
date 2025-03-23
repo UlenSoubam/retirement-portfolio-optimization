@@ -56,10 +56,12 @@ The objective was to construct a long-term, optimized retirement portfolio using
 - The Efficient Frontier shows the best risk-return trade-offs.
 - The Capital Market Line (CML) connects the risk-free rate with the tangency portfolio.
 - **Interpretation:**
-  - If the portfolio lies on the CML, it is optimal in terms of risk-adjusted returns.
+  - The portfolio lies on the CML, which is the most optimal in terms of risk-adjusted returns.
   - Portfolios above the CML may be too aggressive, while those below are suboptimal.
 
 ## 🔹 **4. Risk-Return Scatter Plot**
+**Visualization of Efficient Frontier, Capital Market Line and Tangency Portfolio**
+  - ![Risk return comparision](result/result/risk_return_scatter_plot.png)
 
 ### ✅ **Comparison Between Portfolio & Individual Stocks**
 - The scatter plot highlights each stock’s return vs. volatility.
