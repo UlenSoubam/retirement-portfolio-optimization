@@ -9,7 +9,7 @@ The objective was to construct a long-term, optimized retirement portfolio using
 - The final tangency portfolio consists of stocks optimally weighted to maximize the Sharpe Ratio.
 - Sector-wise distribution ensures diversification, reducing industry-specific risks.
 - Interpretation:
-  - Overweight allocation in stable, high-dividend sectors (e.g., FMCG, IT) indicates a focus on long-term growth.
+  - Overweight allocation in stable, high-dividend sectors such as Capital Goods, Services, Consumer Durables (as per fundamental data) indicates a focus on long-term growth.
   - Minimal allocation to volatile sectors (e.g., Realty, Metals) suggests controlled risk exposure.
 
 ### ✅ **Portfolio Risk & Return Metrics**
