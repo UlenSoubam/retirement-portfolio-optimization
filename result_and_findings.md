@@ -22,11 +22,11 @@ The objective was to construct a long-term, optimized retirement portfolio using
 | **Maximum Drawdown**   | -8%    |
 
 - **Interpretation:**
-  - Annualized Return exceeds the 12% CAGR target,  >12% (Strong), >15% (Aggressive)
-  - Portfolio is below 10% which is Low-risk, stable portfolio. <10% (Low risk), 10-15% (Moderate), >15% (High)
-  - Sharpe Ratio above 1 indicates exceptional highly efficient downside protection. >1 (Good), >1.5 (Excellent), >2 (Outstanding)
-  - Sortino Ratio Above 1.5, meaning good downside protection and return efficiency. >1.5 (Acceptable), >2 (Strong), >3 (Exceptional)
-  - Maximum drawdown provides insight into historical losses during downturns. >-20% (High risk), <-10% (Acceptable), <-5% (Excellent)
+  - Annualized Return exceeds the 12% CAGR target at 16%. **>12% (Strong), >15% (Aggressive)**
+  - Portfolio volatility stands at 8% which is below 10% indicating Low-risk. **stable portfolio. <10% (Low risk), 10-15% (Moderate), >15% (High)**
+  - Sharpe Ratio is above 1 indicating well balanced risk-return profile. **(suboptimal)<1 to 2(moderate)<2 to 3(strong)**
+  - Sortino Ratio Above 1.5, meaning good downside protection and return efficiency. **(poor)<1 to 2(acceptable)<2 to 3(strong downside risk adjusted return)**
+  - Maximum drawdown provides insight into historical losses during downturns, -8% indicated very low risk, highly stable portfolio. **(excellent)<-10% to -20%(good)<-20% to -30%(moderate)**
 
 ## 🔹 **2. Monte Carlo Simulation Analysis**
 **Visualization of Monte Carlo CAGR distribution**
