@@ -22,8 +22,8 @@ The objective was to construct a long-term, optimized retirement portfolio using
 | **Maximum Drawdown**   | -8%    |
 
 - **Interpretation:**
-  - Annualized Return exceeds the 12% CAGR target at 16%. **>12% (Strong), >15% (Aggressive)**
-  - Portfolio volatility stands at 8% which is below 10% indicating Low-risk. **stable portfolio. <10% (Low risk), 10-15% (Moderate), >15% (High)**
+  - Annualized Return exceeds the 12% CAGR target at 16%. **>12% (Strong)>15%(Aggressive)**
+  - Portfolio volatility stands at 8% which is below 10% indicating Low-risk. **stable<10% to 15%(Moderate)<15%(High)**
   - Sharpe Ratio is above 1 indicating well balanced risk-return profile. **(suboptimal)<1 to 2(moderate)<2 to 3(strong)**
   - Sortino Ratio Above 1.5, meaning good downside protection and return efficiency. **(poor)<1 to 2(acceptable)<2 to 3(strong downside risk adjusted return)**
   - Maximum drawdown provides insight into historical losses during downturns, -8% indicated very low risk, highly stable portfolio. **(excellent)<-10% to -20%(good)<-20% to -30%(moderate)**
@@ -76,6 +76,7 @@ The objective was to construct a long-term, optimized retirement portfolio using
 - The cumulative return visualization shows performance over time.
 - **Interpretation:**
   - The tangency portfolio outperforms NIFTY 50 which suggests superior stock selection.
+  - Success in stocks screening using fundamental and return metrics.
   - If underperformance is observed, rebalancing might be needed.
 
 ## 🔹 **6. Dividend Yield Analysis**
@@ -84,16 +85,17 @@ The objective was to construct a long-term, optimized retirement portfolio using
 ### ✅ **Stock-wise Dividend Yield & Portfolio vs. NIFTY 50**
 - High-dividend stocks provide stable passive income.
 - **Interpretation:**
-  - The portfolio yield > NIFTY 50 yield, which ensures reliable income generation.
+  - The portfolio yield deviates upward in a steady steep slope from NIFTY 50 yield, which ensures strong capital appreciation.
   - If lower, additional dividend-yielding assets may be needed.
 
 ## 🔹 **7. Final Evaluation: Is the Portfolio Retirement-Ready?**
 
-✅ **The portfolio has met the stated objective suggesting it is suitable for retirement portfolio**
-- It exceeds **12% CAGR** with controlled risk.
-- Strong **Sharpe & Sortino Ratios** for risk-adjusted returns.
+✅ **The portfolio has met all the stated objective suggesting it is suitable for retirement**
+- It has exceeded **12% CAGR** with controlled risk.
+- It has strong **Sharpe & Sortino Ratios** for risk-adjusted returns.
+- Tangengy portfolio has the most optimum risk and return tradeoff.
 - Monte Carlo simulations indicate high probability of success.
-- Dividend yield exceeding that of nifty 50
+- Dividend yield exceeded nifty 50.
 - Sectoral diversification has enhanced stability.
 
 
