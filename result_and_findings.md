@@ -61,7 +61,7 @@ The objective was to construct a long-term, optimized retirement portfolio using
 
 ## 🔹 **4. Risk-Return Scatter Plot**
 **Visualization of Efficient Frontier, Capital Market Line and Tangency Portfolio**
-  - ![Risk return comparision](result/result/risk_return_scatter_plot.png)
+  - ![Risk return comparision](result/pf_vs_stk_return_scatter_plot.png)
 
 ### ✅ **Comparison Between Portfolio & Individual Stocks**
 - The scatter plot highlights each stock’s return vs. volatility.
@@ -70,34 +70,33 @@ The objective was to construct a long-term, optimized retirement portfolio using
   - Stocks far right indicate high risk, while those higher on the Y-axis have strong returns.
 
 ## 🔹 **5. Cumulative Return Comparison**
-
+**Visualization of Cumulative Performance**
+![Cumulative performance](result/tangencyportfolio_vs_nifty50.png)
 ### ✅ **Tangency Portfolio vs. NIFTY 50**
 - The cumulative return visualization shows performance over time.
 - **Interpretation:**
-  - If the tangency portfolio outperforms NIFTY 50, it suggests superior stock selection.
+  - The tangency portfolio outperforms NIFTY 50 which suggests superior stock selection.
   - If underperformance is observed, rebalancing might be needed.
 
 ## 🔹 **6. Dividend Yield Analysis**
-
+**Visualization of Cumulative Performance**
+![Dividend yield](result/div_yield_comparision.png)
 ### ✅ **Stock-wise Dividend Yield & Portfolio vs. NIFTY 50**
 - High-dividend stocks provide stable passive income.
 - **Interpretation:**
-  - If the portfolio yield > NIFTY 50 yield, it ensures reliable income generation.
+  - The portfolio yield > NIFTY 50 yield, which ensures reliable income generation.
   - If lower, additional dividend-yielding assets may be needed.
 
 ## 🔹 **7. Final Evaluation: Is the Portfolio Retirement-Ready?**
 
-✅ **If Successful:**
-- Meets or exceeds **12% CAGR** with controlled risk.
+✅ **The portfolio has met the stated objective suggesting it is suitable for retirement portfolio**
+- It exceeds **12% CAGR** with controlled risk.
 - Strong **Sharpe & Sortino Ratios** for risk-adjusted returns.
 - Monte Carlo simulations indicate high probability of success.
-- Sectoral diversification enhances stability.
+- Dividend yield exceeding that of nifty 50
+- Sectoral diversification has enhanced stability.
 
-❌ **If Adjustments Needed:**
-- **High volatility?** → Reduce exposure to high-beta stocks.
-- **Weak CAGR probability?** → Reassess allocations.
-- **High drawdowns?** → Add defensive assets (FMCG, Healthcare, Bonds).
 
----
 
-📌 *This markdown serves as a comprehensive summary of portfolio optimization findings, ideal for documentation on GitHub!* 🚀
+
+
