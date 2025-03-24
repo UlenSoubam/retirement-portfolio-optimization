@@ -76,6 +76,7 @@ The objective was to construct a long-term, optimized retirement portfolio using
 - The cumulative return visualization shows performance over time.
 - **Interpretation:**
   - The tangency portfolio outperforms NIFTY 50 which suggests superior stock selection.
+  - The portfolio return deviates upward in a steady steep slope from NIFTY 50, which ensures strong capital appreciation.
   - Success in stocks screening using fundamental and return metrics.
   - If underperformance is observed, rebalancing might be needed.
 
@@ -85,7 +86,7 @@ The objective was to construct a long-term, optimized retirement portfolio using
 ### ✅ **Stock-wise Dividend Yield & Portfolio vs. NIFTY 50**
 - High-dividend stocks provide stable passive income.
 - **Interpretation:**
-  - The portfolio yield deviates upward in a steady steep slope from NIFTY 50 yield, which ensures strong capital appreciation.
+  - The portfolio dividend yield is significantly higher than that of NIFTY50 ensuring strong dividend income.
   - If lower, additional dividend-yielding assets may be needed.
 
 ## 🔹 **7. Final Evaluation: Is the Portfolio Retirement-Ready?**
