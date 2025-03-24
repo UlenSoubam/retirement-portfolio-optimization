@@ -11,7 +11,7 @@ This project follows Google's Data Analytics Process (APPASA):
 ---
 
 ## 🎯 1️⃣ ASK: Defining the Problem
-**How can we construct an optimized retirement portfolio using NIFTY 500 stocks to achieve a minimum CAGR of 12% while ensuring sector diversification, passive income, and controlled risk-adjusted returns?**
+**How can we construct an optimized retirement portfolio suitable for a time period of atleast 25 years with regular restructuring using NIFTY 500 stocks to achieve a minimum CAGR of 12% while ensuring sector diversification, passive income, and controlled risk-adjusted returns?**
 
 ---
 
