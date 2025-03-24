@@ -99,7 +99,7 @@ The objective was to construct a long-term, optimized retirement portfolio using
 - Dividend yield exceeded nifty 50.
 - Sectoral diversification has enhanced stability.
 
-
+**NOTE:** Refer to [data analysis process](README.md) to better understand the scope and limitation of this case study
 
 
 
