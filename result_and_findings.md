@@ -1,5 +1,5 @@
 # 📊 **Optimized Retirement Portfolio: Results & Findings**
-The objective was to construct a long-term, optimized retirement portfolio using stocks from the NIFTY 500 index, ensuring stable capital appreciation, reliable passive income through dividends, and enhanced risk-adjusted returns over a 25-year horizon. Stocks will be screened using fundamental and other risk-return metrics. The selected portfolio will be optimized using Modern Portfolio Theory (MPT) to determine the ideal asset allocation for the tangency portfolio, targeting a minimum Compound Annual Growth Rate (CAGR) of 12%.
+The objective was to construct a long-term, optimized retirement portfolio using stocks from the NIFTY 500 index, ensuring stable capital appreciation, reliable passive income through dividends, and enhanced risk-adjusted returns over a 25-year horizon. Stocks were screened using fundamental and other risk-return metrics. The selected portfolio was optimized using Modern Portfolio Theory (MPT) to determine the ideal asset allocation for the tangency portfolio, targeting a minimum Compound Annual Growth Rate (CAGR) of 12%.
 ## 🔹 **1. Portfolio Optimization Results**
 ### Visualization of Asset Allocation In The Tangency Portfolio
 ![visualization 1](result/tangency_portfolio_asset_allocation.png)
