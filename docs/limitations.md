@@ -2,7 +2,7 @@
 
 This study is based on **synthetically generated financial data** due to the unavailability of **real stock and fundamental data** from freely accessible sources. Multiple data sources were explored, including:
 
-- **Stock Exchange Websites** (NSE, BSE, screener) – Limited access to 10 year historical financials and only partial datasets available.
+- **Stock Exchange Websites** (NSE, BSE, screener) – Limited access of 10 year historical financials and only partial datasets available.
 - **Financial APIs** (Yahoo Finance, Alpha Vantage, yahooquery) – Free versions provided only **incomplete or limited data**, while comprehensive access required paid subscriptions.
 - **Company Filings & Reports** (SEBI, Annual Reports) – Available data lacked the structured format needed for large-scale portfolio optimization.
 - **Web Scraping** – Restricted by website policies and inconsistent data formats.
