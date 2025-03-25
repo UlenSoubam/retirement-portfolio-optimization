@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load Stock-Level Risk-Return Data
-stock_data = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\data filtering\filtered_key_return_metrics.csv")
+stock_data = pd.read_csv("filtered_key_return_metrics.csv")
 
 # Load Tangency Portfolio Data
-portfolio_data = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\portfolio_metrics.csv")
+portfolio_data = pd.read_csv("portfolio_metrics.csv")
 
 # Ensure column names are clean
 stock_data.columns = stock_data.columns.str.strip()
