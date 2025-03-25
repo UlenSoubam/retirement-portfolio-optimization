@@ -42,20 +42,20 @@ This project follows Google's Data Analytics Process (APPASA):
 9. **Filter return metrics using appropriate thresholds**:
    -  Stocks & their key [return metrics](data/key_return_metrics.csv) → [10 selected stocks](data/filtered_key_return_metrics.csv).
 10. **Merge daily returns with filtered return metrics**:
-    - [10 selected stocks](data/filtered_key_return_metrics.csv) LEFT JOIN [Stock daily return](data/stock_daily_return.csv). → Merged[key metrics & daily return](data/filtered_keymetrics_dailyreturn.csv) data.
+    - [10 selected stocks](data/filtered_key_return_metrics.csv) LEFT JOIN [Stock daily return](data/stock_daily_return.csv). → Merged [key metrics & daily return](data/filtered_keymetrics_dailyreturn.csv) data.
 
 ---
 
 ## **A - Analyze (Perform Calculations & Extract Insights)**
 
 11. **Compute expected annual returns & covariance matrix**:
-    - (`filtered_keymetrics_dailyreturn.csv` → `expected_annual_return.csv`, `covariance_matrix.csv`).
+    - [key metrics & daily return](data/filtered_keymetrics_dailyreturn.csv) → [Expected annual return](data/expected_annual_return.csv) & [covariance matrices](data/covariance_matrix.csv).
 12. **Perform Monte Carlo Simulation**:
-    - (`expected_annual_return.csv`, `covariance_matrix.csv` → `monte_carlo_simulation.csv`).
+    - [Expected annual return](data/expected_annual_return.csv) & [covariance matrices](data/covariance_matrix.csv). → [monte_carlo_simulation](data/monte_carlo_simulation.csv).
 13. **Clean Monte Carlo simulation data**:
-    - (`monte_carlo_simulation.csv` → `clean_monte_carlo_simulation.csv`).
+    - [monte_carlo_simulation](data/monte_carlo_simulation.csv) → [Cleaned monte carlo](data/clean_monte_carlo_simulation.csv) simulation data.
 14. **Generate tangency portfolio weights**:
-    - (`clean_monte_carlo_simulation.csv` → `tangency_portfolio.csv`).
+    - [Cleaned monte carlo](data/clean_monte_carlo_simulation.csv) → [tangency_portfolio.csv](data/tangency_portfolio.csv) weight data.
 
 ---
 
