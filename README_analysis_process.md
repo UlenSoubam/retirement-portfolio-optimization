@@ -4,8 +4,9 @@ To construct a long-term, optimized retirement portfolio using stocks from the N
 ## 🔍 Google Data Analytics Process (APPASA) Framework
 This project follows Google's Data Analytics Process (APPASA):
 
-**NOTE:** I did not use the actual fundamental and historical price data for this case study due to [limitations](docs/limitations.md)
-
+**NOTE:** 
+- I did not use the actual fundamental and historical price data for this case study due to [limitations](docs/limitations.md)
+- The financial concepts used in this analysis process is explained in ['link'](docs/financial_concepts.md)
 ✅ **Ask** → **Prepare** → **Process** → **Analyze** → **Share** → **Act**
 
 ---
@@ -125,10 +126,5 @@ This project follows Google's Data Analytics Process (APPASA):
 👤 **[Your Name]**  
 📧 **Email:** ulensoubam55@gmail.com
 💼 **LinkedIn:** https://www.linkedin.com/in/ulen5  
-💻 **GitHub:** [Your GitHub](https://github.com/yourusername)  
+💻 **GitHub:** [Ulen Soubam](https://github.com/UlenSoubam))  
 
-⭐ **If you find this project helpful, don't forget to star the repo!** 🚀
-
-💻 **GitHub:** [Your GitHub](https://github.com/yourusername)  
-
-⭐ **If you find this project helpful, don't forget to star the repo!** 🚀
