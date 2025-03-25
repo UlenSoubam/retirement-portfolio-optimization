@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load portfolio returns
-portfolio_returns = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\monte_carlo\tangency_portfolio_returns.csv", parse_dates=["date"])
+portfolio_returns = pd.read_csv("tangency_portfolio_returns.csv", parse_dates=["date"])
 
 # Load NIFTY 50 returns
-nifty_returns = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\index_daily_return.csv", parse_dates=["date"])
+nifty_returns = pd.read_csv("index_daily_return.csv", parse_dates=["date"])
 
 # Merge both datasets on "date"
 df = portfolio_returns.merge(nifty_returns, on="date", how="inner")
