@@ -1,6 +1,6 @@
 import pandas as pd
 
-# 📌 Compute daily return for STOCKS
+# Compute daily return for STOCKS
 stock_df = pd.read_csv("cleaned_synthetic_price_data.csv", parse_dates=["date"])
 
 # Sort by symbol and date
