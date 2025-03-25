@@ -62,16 +62,16 @@ This project follows Google's Data Analytics Process (APPASA):
 
 11. **Compute expected annual returns & covariance matrix**:
     - [key metrics & daily return](data/filtered_keymetrics_dailyreturn.csv) → [Expected annual return](data/expected_annual_return.csv) & [covariance matrices](data/covariance_matrix.csv).
-###### _Code: []()_
+###### _Code: [expected annual & covariance matrix](codes/expected_ar_cov_mtx.py)_
 12. **Perform Monte Carlo Simulation**:
     - [Expected annual return](data/expected_annual_return.csv) & [covariance matrices](data/covariance_matrix.csv). → [monte_carlo_simulation](data/monte_carlo_simulation.csv).
-###### _Code: []()_
+###### _Code: [monte carlo simulation](codes/monte_carlo_simulation.py)_
 13. **Clean Monte Carlo simulation data**:
     - [monte_carlo_simulation](data/monte_carlo_simulation.csv) → [Cleaned monte carlo](data/clean_monte_carlo_simulation.csv) simulation data.
-###### _Code: []()_
+###### _Code: [cleaned monte carlo simulation](codes/clean_montecarlo.py)_
 14. **Generate tangency portfolio weights**:
     - [Cleaned monte carlo](data/clean_monte_carlo_simulation.csv) → [tangency_portfolio.csv](data/tangency_portfolio.csv) weight data.
-###### _Code: []()_
+###### _Code: [tangency_portfolio](codes/tangency_portfolio.py)_
 
 ---
 
