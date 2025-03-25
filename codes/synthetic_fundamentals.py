@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load NIFTY 500 stock list
-df = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\data\nifty500_list.csv")
+df = pd.read_csv(nifty500_list.csv)
 
 # Define industry-specific fundamental metric ranges
 industry_params = {
@@ -56,4 +56,4 @@ for _, row in df.iterrows():
 fundamentals_df = pd.DataFrame(fundamentals)
 fundamentals_df.to_csv("synthetic_fundamentals.csv", index=False)
 
-print("✅ Industry-specific synthetic fundamentals generated and saved as 'synthetic_fundamentals.csv'")
+print("Industry-specific synthetic fundamentals generated and saved as 'synthetic_fundamentals.csv'")
