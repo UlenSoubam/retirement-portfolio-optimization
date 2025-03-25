@@ -3,7 +3,7 @@ import numpy as np
 import re
 
 # Load the generated synthetic fundamental dataset
-file_path = r"C:\Users\ulens\git_hub\tangency_portfolio\data\synthetic_fundamentals.csv"
+file_path = (synthetic_fundamentals.csv)
 df = pd.read_csv(file_path)
 
 ### Step 1: Standardize Column Names ###
