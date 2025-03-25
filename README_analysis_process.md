@@ -44,16 +44,17 @@ This project follows Google's Data Analytics Process (APPASA):
 7. **Compute daily returns**:
    - Using cleaned [Synthetic historical price data](data/cleaned_synthetic_price_data.csv) → [Stock daily return](data/stock_daily_return.csv) is computed.
    - Using [NIFTY50](data/synthetic_nifty50_ohlc.csv) → [Index daily return](data/index_daily_return.csv) is computed.
+###### _Code: [daily return](codes/daily_return.py)_
 
 8. **Compute key return metrics**:
    - Using [Stock daily return](data/stock_daily_return.csv) & [Index daily return](data/index_daily_return.csv) → Stocks & their key [return metrics](data/key_return_metrics.csv) is computed.
-###### _Code: []()_
+###### _Code: [key return metrics](codes/key_return_metrics.py)_
 9. **Filter return metrics using appropriate thresholds**:
-   -  Stocks & their key [return metrics](data/key_return_metrics.csv) → [10 selected stocks](data/filtered_key_return_metrics.csv).
-###### _Code: []()_
+   -  Stocks & their key [return metrics](data/key_return_metrics.csv) → [10 selected stocks](data/filtered_key_return_metrics.csv) using SQLworkbench.
+###### _Code: [10 selected stocks](codes/filtering_key_return_metrics.sql)_
 10. **Merge daily returns with filtered return metrics**:
     - [10 selected stocks](data/filtered_key_return_metrics.csv) LEFT JOIN [Stock daily return](data/stock_daily_return.csv). → Merged [key metrics & daily return](data/filtered_keymetrics_dailyreturn.csv) data.
-###### _Code: []()_
+###### _Code: [key metrics & daily return](codes/filtered_keymetrice_dailyreturn.py)_
 
 ---
 
