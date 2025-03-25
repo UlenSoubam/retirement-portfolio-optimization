@@ -20,15 +20,15 @@ This project follows Google's Data Analytics Process (APPASA):
 1. **Fetch fundamental data** of NIFTY 500 stocks: 
    - [Synthetic Fundamentals](data/synthetic_fundamentals.csv) generated using [nifty500 list](data/nifty500_list.csv) from [NSE](https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv)
 2. **Clean fundamental data**:
-   - (`synthetic_fundamentals.csv` → `cleaned_synthetic_fundamentals.csv`).
+   - [Synthetic Fundamentals](data/synthetic_fundamentals.csv) → [Clean nifty500 fundamentals](data/cleaned_synthetic_fundamentals.csv)
 3. **Upload cleaned data to MySQL Workbench** and filter based on industry-appropriate thresholds:
-   - (`cleaned_synthetic_fundamentals.csv` → `sql_filtered_stocks114.csv`).
+   -  [Clean nifty500 fundamentals](data/cleaned_synthetic_fundamentals.csv) → [Filtered fundamentals using SQL](data/sql_filtered_stocks114.csv)
 4. **Fetch 10 years of adjusted closing prices** for filtered stocks:
-   - (`sql_filtered_stocks114.csv` → `synthetic_price_data.csv`).
+   - [Filtered fundamentals using SQL](data/sql_filtered_stocks114.csv) → [Synthetic historical price data](data/synthetic_price_data.csv)
 5. **Clean stock price data**:
-   - (`synthetic_price_data.csv` → `cleaned_synthetic_price_data.csv`).
+   - [Synthetic historical price data](data/synthetic_price_data.csv) → [Cleaned Synthetic historical price data](data/cleaned_synthetic_price_data.csv)
 6. **Fetch 10 years of NIFTY 50 historical price data**:
-   - (`synthetic_nifty50_ohlc.csv`).
+   - Generated [NIFTY50](data/synthetic_nifty50_ohlc.csv)  (open,high,low,close) data.
 
 ---
 
