@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load Portfolio Dividend Data
-portfolio_dividends = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\Data generation\portfolio_divided_yield_data_generation.csv")
+portfolio_dividends = pd.read_csv("portfolio_divided_yield_data.csv")
 
 # Compute Portfolio Dividend Yield (Weighted Sum)
 portfolio_dividend_yield = portfolio_dividends["weighted_dividend_yield"].sum()
