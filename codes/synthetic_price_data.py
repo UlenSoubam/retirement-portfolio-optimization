@@ -3,7 +3,7 @@ import numpy as np
 import datetime
 
 # Load filtered stocks
-file_path = r"C:\Users\ulens\git_hub\tangency_portfolio\code\data filtering\sql_filtered_stocks114.csv"
+file_path = r"sql_filtered_stocks114.csv"
 stocks_df = pd.read_csv(file_path)
 
 # Parameters for synthetic data generation
@@ -51,4 +51,4 @@ price_df = pd.DataFrame(price_data, columns=["date", "symbol", "industry", "clos
 output_file = r"C:\Users\ulens\git_hub\tangency_portfolio\data\synthetic_price_data.csv"
 price_df.to_csv(output_file, index=False)
 
-print("✅ Synthetic price data generation complete. File saved as 'synthetic_price_data.csv'.")
+print("Synthetic price data generation complete. File saved as 'synthetic_price_data.csv'.")
