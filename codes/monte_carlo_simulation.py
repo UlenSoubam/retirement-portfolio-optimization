@@ -2,15 +2,9 @@ import pandas as pd
 import numpy as np
 
 # Load Expected Returns & Covariance Matrix
-expected_annual_return = pd.read_csv(
-    r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\expected_annual_return.csv", 
-    index_col=0
-).squeeze()  # Convert to Series properly
+expected_annual_return = pd.read_csv("expected_annual_return.csv", index_col=0).squeeze()  # Convert to Series properly
 
-cov_matrix = pd.read_csv(
-    r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\covariance_matrix.csv",
-    index_col=0
-)
+cov_matrix = pd.read_csv("covariance_matrix.csv",index_col=0)
 
 # Define the number of portfolios to simulate
 num_portfolios = 100000
