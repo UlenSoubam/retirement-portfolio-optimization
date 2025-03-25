@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load Monte Carlo simulation data
-file_path = r"C:\Users\ulens\git_hub\tangency_portfolio\monte_carlo\monte_carlo_simulation.csv"
-df = pd.read_csv(file_path)
+monte_carlo_simulation.csv"
+df = pd.read_csv("monte_carlo_simulation.csv")
 
 # Convert returns to percentage for better readability
 df['Returns'] = df['Returns'] * 100  # Assuming Returns are in decimal (e.g., 0.12 for 12%)
