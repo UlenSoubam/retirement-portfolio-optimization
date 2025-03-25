@@ -4,10 +4,10 @@ import seaborn as sns
 import squarify  # For Treemap
 
 # Load Tangency Portfolio Data
-portfolio_df = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\monte_carlo\tangency_portfolio.csv")
+portfolio_df = pd.read_csv("tangency_portfolio.csv")
 
 # Load NIFTY 500 Data
-nifty500_df = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\Data generation\nifty500_list.csv")
+nifty500_df = pd.read_csv("nifty500_list.csv")
 
 # Merge to Add Industry Information
 merged_df = portfolio_df.merge(nifty500_df, left_on="Stock", right_on="Symbol", how="left")
