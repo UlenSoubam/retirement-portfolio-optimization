@@ -10,39 +10,39 @@ This project follows Google's Data Analytics Process (APPASA):
 
 ---
 
-## 🎯 1️⃣ ASK: Defining the Problem
+## 🎯 1️- ASK: Defining the Problem
 **How can we construct an optimized retirement portfolio suitable for a time period of atleast 25 years with regular restructuring using NIFTY 500 stocks to achieve a minimum CAGR of 12% while ensuring sector diversification, passive income, and controlled risk-adjusted returns?**
 
 ---
 
-## **P - Prepare (Collect & Store Data)**
+## 2 - Prepare (Collect & Store Data)**
 
 1. **Fetch fundamental data** of NIFTY 500 stocks: 
-   - [Synthetic Fundamentals](data/synthetic_fundamentals.csv) generated using [nifty500 list](data/nifty500_list.csv) from [NSE](https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv)
+   - NIFTY500 [synthetic Fundamentals](data/synthetic_fundamentals.csv) generated using [nifty500 list](data/nifty500_list.csv) from [NSE](https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv)
 2. **Clean fundamental data**:
-   - [Synthetic Fundamentals](data/synthetic_fundamentals.csv) → [Clean nifty500 fundamentals](data/cleaned_synthetic_fundamentals.csv)
-3. **Upload cleaned data to MySQL Workbench** and filter based on industry-appropriate thresholds:
-   -  [Clean nifty500 fundamentals](data/cleaned_synthetic_fundamentals.csv) → [Filtered fundamentals using SQL](data/sql_filtered_stocks114.csv)
+   - NIFTY500 [synthetic Fundamentals](data/synthetic_fundamentals.csv) → Cleaned [nifty500 fundamentals](data/cleaned_synthetic_fundamentals.csv)
+3. **Upload cleaned data to MySQL Workbench** and filter based on industry-appropriate fundamental metrics thresholds:
+   -  Cleaned [nifty500 fundamentals](data/cleaned_synthetic_fundamentals.csv) → [114 stocks](data/sql_filtered_stocks114.csv) filtered using SQL workbench
 4. **Fetch 10 years of adjusted closing prices** for filtered stocks:
-   - [Filtered fundamentals using SQL](data/sql_filtered_stocks114.csv) → [Synthetic historical price data](data/synthetic_price_data.csv)
+   - Using the filtered[114 stocks](data/sql_filtered_stocks114.csv) → Generate [synthetic historical price data](data/synthetic_price_data.csv) of the filtered 114 stocks.
 5. **Clean stock price data**:
-   - [Synthetic historical price data](data/synthetic_price_data.csv) → [Cleaned Synthetic historical price data](data/cleaned_synthetic_price_data.csv)
+   - [Synthetic historical price data](data/synthetic_price_data.csv) → Cleaned [synthetic historical price data](data/cleaned_synthetic_price_data.csv)
 6. **Fetch 10 years of NIFTY 50 historical price data**:
-   - Generated [NIFTY50](data/synthetic_nifty50_ohlc.csv)  (open,high,low,close) data.
+   - Generate [NIFTY50](data/synthetic_nifty50_ohlc.csv) (open,high,low,close) data.
 
 ---
 
 ## **P - Process (Clean & Transform Data)**
 
 7. **Compute daily returns**:
-   - (`cleaned_synthetic_price_data.csv` → `stock_daily_return.csv`).
-   - (`synthetic_nifty50_ohlc.csv` → `index_daily_return.csv`).
+   - Using cleaned [Synthetic historical price data](data/cleaned_synthetic_price_data.csv) → [Stock daily return](data/stock_daily_return.csv) is computed.
+   - Using [NIFTY50](data/synthetic_nifty50_ohlc.csv) → [Index daily return](data/index_daily_return.csv) is computed.
 8. **Compute key return metrics**:
-   - (`stock_daily_return.csv`, `index_daily_return.csv` → `key_return_metrics.csv`).
+   - Using [Stock daily return](data/stock_daily_return.csv) & [Index daily return](data/index_daily_return.csv) → Stocks & their key [return metrics](data/key_return_metrics.csv) is computed.
 9. **Filter return metrics using appropriate thresholds**:
-   - (`key_return_metrics.csv` → `filtered_key_return_metrics.csv`).
+   -  Stocks & their key [return metrics](data/key_return_metrics.csv) → [10 selected stocks](data/filtered_key_return_metrics.csv).
 10. **Merge daily returns with filtered return metrics**:
-    - (`filtered_key_return_metrics.csv` LEFT JOIN `stock_daily_return.csv` → `filtered_keymetrics_dailyreturn.csv`).
+    - [10 selected stocks](data/filtered_key_return_metrics.csv) LEFT JOIN [Stock daily return](data/stock_daily_return.csv). → Merged[key metrics & daily return](data/filtered_keymetrics_dailyreturn.csv) data.
 
 ---
 
