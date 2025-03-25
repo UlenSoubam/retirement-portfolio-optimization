@@ -4,8 +4,8 @@ import numpy as np
 # Step 1: Load Data and Compute Basic Return Metrics
 
 # Load daily returns data
-stock_returns = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\stock_daily_return.csv", parse_dates=["date"])
-index_returns = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\index_daily_return.csv", parse_dates=["date"])
+stock_returns = pd.read_csv("stock_daily_return.csv", parse_dates=["date"])
+index_returns = pd.read_csv("index_daily_return.csv", parse_dates=["date"])
 
 # Pivot stock data to have symbols as columns
 stock_returns = stock_returns.pivot(index="date", columns="symbol", values="daily_return")
