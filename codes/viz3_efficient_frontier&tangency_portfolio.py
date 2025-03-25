@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load Monte Carlo Simulation Data
-df = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\data cleaning\clean_monte_carlo_simulation.csv")  # Replace with actual file name
+df = pd.read_csv("clean_monte_carlo_simulation.csv")  # Replace with actual file name
 
 # Set Risk-Free Rate (Assumed 5% or 0.05)
 risk_free_rate = 0.05
