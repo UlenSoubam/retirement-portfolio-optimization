@@ -15,35 +15,69 @@ This project follows Google's Data Analytics Process (APPASA):
 
 ---
 
-## 🗂️ 2️⃣ PREPARE: Data Collection & Cleaning
-✅ **Fetched & cleaned fundamental data for NIFTY 500 stocks** → `cleaned_synthetic_fundamentals.csv`
-✅ **Filtered stocks based on industry thresholds in MySQL** → `sql_filtered_stocks114.csv`
-✅ **Extracted & cleaned 10-year adjusted closing price data** → `cleaned_synthetic_price_data.csv`
-✅ **Fetched NIFTY 50 historical price data** → `synthetic_nifty50_ohlc.csv`
+## **P - Prepare (Collect & Store Data)**
+
+1. **Fetch fundamental data** of NIFTY 500 stocks: 
+   - [Synthetic Fundamentals](data/synthetic_fundamentals.csv) generated using [nifty500 list](data/nifty500_list.csv) from [NSE](https://nsearchives.nseindia.com/content/indices/ind_nifty500list.csv)
+2. **Clean fundamental data**:
+   - (`synthetic_fundamentals.csv` → `cleaned_synthetic_fundamentals.csv`).
+3. **Upload cleaned data to MySQL Workbench** and filter based on industry-appropriate thresholds:
+   - (`cleaned_synthetic_fundamentals.csv` → `sql_filtered_stocks114.csv`).
+4. **Fetch 10 years of adjusted closing prices** for filtered stocks:
+   - (`sql_filtered_stocks114.csv` → `synthetic_price_data.csv`).
+5. **Clean stock price data**:
+   - (`synthetic_price_data.csv` → `cleaned_synthetic_price_data.csv`).
+6. **Fetch 10 years of NIFTY 50 historical price data**:
+   - (`synthetic_nifty50_ohlc.csv`).
 
 ---
 
-## ⚙️ 3️⃣ PROCESS: Data Transformation
-✅ **Computed daily returns for stocks & NIFTY 50** → `stock_daily_return.csv`, `index_daily_return.csv`
-✅ **Derived key return metrics (Sharpe ratio, Sortino ratio, CAGR, max drawdown)** → `key_return_metrics.csv`
-✅ **Filtered underperforming stocks based on return metrics** → `filtered_key_return_metrics.csv`
+## **P - Process (Clean & Transform Data)**
+
+7. **Compute daily returns**:
+   - (`cleaned_synthetic_price_data.csv` → `stock_daily_return.csv`).
+   - (`synthetic_nifty50_ohlc.csv` → `index_daily_return.csv`).
+8. **Compute key return metrics**:
+   - (`stock_daily_return.csv`, `index_daily_return.csv` → `key_return_metrics.csv`).
+9. **Filter return metrics using appropriate thresholds**:
+   - (`key_return_metrics.csv` → `filtered_key_return_metrics.csv`).
+10. **Merge daily returns with filtered return metrics**:
+    - (`filtered_key_return_metrics.csv` LEFT JOIN `stock_daily_return.csv` → `filtered_keymetrics_dailyreturn.csv`).
 
 ---
 
-## 📊 4️⃣ ANALYZE: Portfolio Optimization & Risk Assessment
-✅ **Computed Expected Annual Returns & Covariance Matrix** → `expected_annual_return.csv`, `covariance_matrix.csv`
-✅ **Ran Monte Carlo Simulation (10,000+ portfolio allocations)** → `monte_carlo_simulation.csv`
-✅ **Derived Tangency Portfolio (Maximum Sharpe Ratio Portfolio)** → `tangency_portfolio.csv`
-✅ **Sector-wise diversification & risk-return analysis**
+## **A - Analyze (Perform Calculations & Extract Insights)**
+
+11. **Compute expected annual returns & covariance matrix**:
+    - (`filtered_keymetrics_dailyreturn.csv` → `expected_annual_return.csv`, `covariance_matrix.csv`).
+12. **Perform Monte Carlo Simulation**:
+    - (`expected_annual_return.csv`, `covariance_matrix.csv` → `monte_carlo_simulation.csv`).
+13. **Clean Monte Carlo simulation data**:
+    - (`monte_carlo_simulation.csv` → `clean_monte_carlo_simulation.csv`).
+14. **Generate tangency portfolio weights**:
+    - (`clean_monte_carlo_simulation.csv` → `tangency_portfolio.csv`).
 
 ---
 
-## 📢 5️⃣ SHARE: Data Visualizations & Insights
-🔹 **Portfolio Allocation & Sector Diversification** `viz1_portfolio_allocation.py`,`viz2_sectorwise_allocation.py`
-🔹 **Efficient Frontier & Capital Market Line** `viz3_efficient_frontier&tangency_portfolio.py`
-🔹 **Risk-Return Scatter Plot (Stocks vs. Portfolio)** `viz4_riskreturn_scatterplot.py`
-🔹 **Cumulative Return: Tangency Portfolio vs. NIFTY 50** `viz5_plot_cumulative_return.py`
-🔹 **Stock-wise & Portfolio Dividend Yield Comparison** `viz6_stockwise_dividend_yield.py`,`viz7_div_yield_conparision.py`
+## **S - Share (Communicate Findings)**
+
+### **Data Visualizations**
+1. **Portfolio allocation visualization**
+   - (`tangency_portfolio.csv`).
+2. **Sector-wise allocation visualization**
+   - (`tangency_portfolio.csv`, `nifty500_list.csv`).
+3. **Efficient Frontier, Capital Market Line, Tangency Portfolio visualization**
+   - (`monte_carlo_simulation.csv`).
+4. **Risk-Return Scatter Plot (Selected Stocks vs Tangency Portfolio)**
+   - (`filtered_key_return_metrics.csv`, `clean_monte_carlo_simulation.csv`).
+5. **Cumulative return comparison (Tangency Portfolio vs NIFTY 50)**
+   - (`tangency_portfolio_return.csv`, `nifty50_return.csv`).
+6. **Stock-wise dividend yield visualization**
+   - (`divyield.csv`).
+7. **Stock vs NIFTY dividend yield comparison**
+   - (`divyield.csv`).
+8. **Monte Carlo Interpretation Visualization**
+   - (`monte_carlo_simulation.csv`).
 
 ---
 
