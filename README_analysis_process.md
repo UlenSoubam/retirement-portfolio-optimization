@@ -76,7 +76,7 @@ This project follows Google's Data Analytics Process (APPASA):
 ---
 
 ## **S - Share (Communicate Findings)**
-## The results and findings are clearly discusses on [link](result_and_findings.md)
+## _The results and findings of this case study are clearly discusses on ['link'](result_and_findings.md)_
 ### **Data Visualizations**
 1. **Portfolio allocation visualization**
    - Data used: [tangency_portfolio.csv](data/tangency_portfolio.csv).
@@ -104,7 +104,7 @@ This project follows Google's Data Analytics Process (APPASA):
 ###### _Code: [viz8](codes/montecarlo_interpretation.py)_
 ---
 
-## 🚀 6️⃣ ACT: Key Decisions & Future Improvements
+## 6️ ACT: Key Decisions & Future Improvements
 ✅ **Adjust sector diversification & rebalancing strategy**
 ✅ **Incorporate macroeconomic indicators for better adaptability**
 ✅ **Explore alternative optimization techniques (e.g., Black-Litterman Model)**
@@ -113,10 +113,10 @@ This project follows Google's Data Analytics Process (APPASA):
 ---
 
 ## 🛠️ Tech Stack & Tools Used
-✅ **Data Processing:** Python (Pandas, NumPy), MySQL
-✅ **Portfolio Optimization:** PyPortfolioOpt, SciPy, NumPy
-✅ **Risk Assessment:** Monte Carlo Simulation
-✅ **Visualization:** Matplotlib, Seaborn
+✅ **Data preparation:** MySQL, Python (Pandas, NumPy, re, datetime), 
+✅ **Data processing:** MySQL, Python(_pandas,numpy_)
+✅ **Data analysing:** Python(_pandas,numpy, ast, re_), Monte Carlo Simulation
+✅ **Data visualization:** Python(_pandas, matplotlib, seaborn, squarify, numpy_)
 ✅ **Version Control & Deployment:** GitHub
 
 ---
@@ -125,22 +125,23 @@ This project follows Google's Data Analytics Process (APPASA):
 ```
 📂 nifty500-portfolio-optimization/
 │
-├── data/                      # Datasets used in the project
+├── codes                      # Datasets used in the project
 │   ├── sample_stock_data.csv
 │   ├── sample_nifty_data.csv
 │
-├── notebooks/                 # Jupyter Notebooks for each stage
+├── data                 # Jupyter Notebooks for each stage
 │   ├── 01_data_cleaning.ipynb
 │   ├── 02_stock_filtering.ipynb
 │   ├── 03_monte_carlo_simulation.ipynb
 │   ├── 04_portfolio_optimization.ipynb
 │   ├── 05_visualizations.ipynb
 │
-├── results/                   # Visualizations & insights
+├── docs                 # Visualizations & insights
 │   ├── portfolio_allocation.png
 │   ├── efficient_frontier.png
 │   ├── risk_return_scatter.png
 │
+|
 ├── README.md                  # Project documentation
 ├── requirements.txt           # Dependencies
 ├── .gitignore                 # Ignored files
