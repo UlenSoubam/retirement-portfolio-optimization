@@ -80,28 +80,28 @@ This project follows Google's Data Analytics Process (APPASA):
 ### **Data Visualizations**
 1. **Portfolio allocation visualization**
    - (`tangency_portfolio.csv`).
-###### _Code: []()_
+###### _Code: [viz1](codes/viz1_portfolio_allocation.py)_
 2. **Sector-wise allocation visualization**
    - (`tangency_portfolio.csv`, `nifty500_list.csv`).
-###### _Code: []()_
+###### _Code: [viz2](codes/viz2_sectorwise_allocation.py)_
 3. **Efficient Frontier, Capital Market Line, Tangency Portfolio visualization**
    - (`monte_carlo_simulation.csv`).
-###### _Code: []()_
+###### _Code: [viz3](codes/viz3_efficient_frontier&tangency_portfolio.py)_
 4. **Risk-Return Scatter Plot (Selected Stocks vs Tangency Portfolio)**
    - (`filtered_key_return_metrics.csv`, `clean_monte_carlo_simulation.csv`).
-###### _Code: []()_
+###### _Code: [viz4](codes/viz4_riskreturn_scatterplot.py)_
 5. **Cumulative return comparison (Tangency Portfolio vs NIFTY 50)**
    - (`tangency_portfolio_return.csv`, `nifty50_return.csv`).
-###### _Code: []()_
+###### _Code: [viz5](codes/viz5_plot_cumulatice_return.py)_
 6. **Stock-wise dividend yield visualization**
    - (`divyield.csv`).
-###### _Code: []()_
+###### _Code: [viz6](codes/viz6_stockwise_dividend_yield.py)_
 7. **Stock vs NIFTY dividend yield comparison**
    - (`divyield.csv`).
-###### _Code: []()_
+###### _Code: [viz7](codes/viz7_div_yield_comparision.py)_
 8. **Monte Carlo Interpretation Visualization**
    - (`monte_carlo_simulation.csv`).
-###### _Code: []()_
+###### _Code: [viz8](codes/montecarlo_interpretation.py)_
 ---
 
 ## 🚀 6️⃣ ACT: Key Decisions & Future Improvements
