@@ -113,68 +113,13 @@ This project follows Google's Data Analytics Process (APPASA):
 ---
 
 ## 🛠️ Tech Stack & Tools Used
-✅ **Data preparation:** MySQL, Python (Pandas, NumPy, re, datetime), 
-✅ **Data processing:** MySQL, Python(_pandas,numpy_)
-✅ **Data analysing:** Python(_pandas,numpy, ast, re_), Monte Carlo Simulation
-✅ **Data visualization:** Python(_pandas, matplotlib, seaborn, squarify, numpy_)
-✅ **Version Control & Deployment:** GitHub
+- **Data preparation:** MySQL, Python (Pandas, NumPy, re, datetime), 
+- **Data processing:** MySQL, Python(_pandas,numpy_)
+- **Data analysing:** Python(_pandas,numpy, ast, re_), Monte Carlo Simulation
+- **Data visualization:** Python(_pandas, matplotlib, seaborn, squarify, numpy_)
+- **Version Control & Deployment:** GitHub
 
----
 
-## 📂 Repository Structure
-```
-📂 nifty500-portfolio-optimization/
-│
-├── codes                      # Datasets used in the project
-│   ├── sample_stock_data.csv
-│   ├── sample_nifty_data.csv
-│
-├── data                 # Jupyter Notebooks for each stage
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_stock_filtering.ipynb
-│   ├── 03_monte_carlo_simulation.ipynb
-│   ├── 04_portfolio_optimization.ipynb
-│   ├── 05_visualizations.ipynb
-│
-├── docs                 # Visualizations & insights
-│   ├── portfolio_allocation.png
-│   ├── efficient_frontier.png
-│   ├── risk_return_scatter.png
-│
-|
-├── README.md                  # Project documentation
-├── requirements.txt           # Dependencies
-├── .gitignore                 # Ignored files
-```
-
----
-
-## 🚀 How to Use This Repository
-
-1️⃣ **Clone this repository**  
-```bash
-git clone https://github.com/yourusername/nifty500-portfolio-optimization.git
-cd nifty500-portfolio-optimization
-```
-
-2️⃣ **Install required dependencies**  
-```bash
-pip install -r requirements.txt
-```
-
-3️⃣ **Run Jupyter Notebook**  
-```bash
-jupyter notebook
-```
-
-4️⃣ **Open & Run Notebooks in Order:**  
-📌 `01_data_cleaning.ipynb` → Data Preprocessing  
-📌 `02_stock_filtering.ipynb` → Fundamental Screening  
-📌 `03_monte_carlo_simulation.ipynb` → Risk Analysis & Simulation  
-📌 `04_portfolio_optimization.ipynb` → Portfolio Construction  
-📌 `05_visualizations.ipynb` → Insights & Charts  
-
----
 
 ## 🤝 Connect With Me
 👤 **[Your Name]**  
