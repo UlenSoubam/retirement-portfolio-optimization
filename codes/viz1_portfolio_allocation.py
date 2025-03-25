@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load Tangency Portfolio Data
-df = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\monte_carlo\tangency_portfolio.csv")
+df = pd.read_csv("tangency_portfolio.csv")
 
 # Extract Required Columns
 stocks = df["Stock"]
