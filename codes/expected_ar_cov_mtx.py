@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load the filtered stock returns
-filtered_stock_returns = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\data filtering\filtered_keymetrics_dailyreturn.csv", parse_dates=["date"])
+filtered_stock_returns = pd.read_csv("filtered_keymetrics_dailyreturn.csv", parse_dates=["date"])
 
 # Pivot the data to have symbols as columns
 daily_returns = filtered_stock_returns.pivot(index="date", columns="symbol", values="daily_return")
