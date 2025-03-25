@@ -1,10 +1,10 @@
 import pandas as pd
 
 # Load filtered stock symbols from the SQL-based filtering
-filtered_stocks = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\data filtering\filtered_key_return_metrics.csv")
+filtered_stocks = pd.read_csv("filtered_key_return_metrics.csv")
 
 # Load daily return data for all stocks
-stock_returns = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\code\risk return metrics\stock_daily_return.csv", parse_dates=["date"])
+stock_returns = pd.read_csv("stock_daily_return.csv", parse_dates=["date"])
 
 # Perform LEFT JOIN to keep only the filtered stocks' daily returns
 filtered_stock_returns = stock_returns.merge(filtered_stocks, on="symbol", how="inner")
