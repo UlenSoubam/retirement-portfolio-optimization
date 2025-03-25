@@ -8,7 +8,7 @@ This project follows Google's Data Analytics Process (APPASA):
 
 **NOTE:** 
 - I did not use the actual fundamental and historical price data for this case study due to [limitations](docs/limitations.md)
-- The financial concepts used in this analysis process is explained in ['link'](docs/financial_concepts.md)
+- The financial concepts used in this analysis process are explained on ['link'](docs/financial_concepts.md)
 ---
 
 ## 🎯 1️- ASK: Defining the Problem
