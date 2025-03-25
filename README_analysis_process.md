@@ -126,5 +126,5 @@ This project follows Google's Data Analytics Process (APPASA):
 👤 **Ulen Soubam**  
 📧 **Email:** ulensoubam55@gmail.com
 💼 **LinkedIn:** https://www.linkedin.com/in/ulen5  
-💻 **GitHub:** ['link'](https://github.com/UlenSoubam))  
+💻 **GitHub:** ['link'](https://github.com/UlenSoubam) 
 
