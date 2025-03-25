@@ -34,23 +34,12 @@ for col in categorical_cols:
 ### Step 3: Remove Duplicates ###
 df.drop_duplicates(subset=["company_name", "symbol"], keep="first", inplace=True)
 
-### Step 4: Handle Outliers ###
-# Apply reasonable financial limits
-#outlier_limits = {
- #   "pe_ratio": (5, 60),
-  #  "roe": (0, 50),  # ROE as a percentage
-   # "dividend_yield": (0, 15),  # Dividend Yield as a percentage
-   # "debt_equity": (0, 5),  # Avoid extreme leverage
-   # "market_cap": (100, 10**6)  # Adjusted to avoid microcaps
-#}
-
 #for col, (min_val, max_val) in outlier_limits.items():
  #   if col in df.columns:
   #      df[col] = np.clip(df[col], min_val, max_val)
 
 ### Step 5: Save Cleaned Data ###
-output_file_path = r"C:\Users\ulens\git_hub\tangency_portfolio\data\cleaned_synthetic_fundamentals.csv"
-df.to_csv(output_file_path, index=False)
+df.to_csv(cleaned_synthetic_fundamentals.csv, index=False)
 
-print("✅ Data cleaning complete. Cleaned file saved as 'cleaned_nifty500_fundamentals.csv'.")
+print("Data cleaning complete. Cleaned file saved as 'cleaned_nifty500_fundamentals.csv'.")
 print("Missing values after cleaning:\n", df.isnull().sum())
