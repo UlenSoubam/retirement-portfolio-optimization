@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Load synthetic price data
-file_path = r"C:\Users\ulens\git_hub\tangency_portfolio\data\synthetic_price_data.csv"
+file_path = r"synthetic_price_data.csv"
 df = pd.read_csv(file_path)
 
 ### Step 1: Standardize Column Names ###
@@ -35,8 +35,8 @@ df.sort_values(by=["date", "symbol"], ascending=[True, True], inplace=True)
 
 
 # Save cleaned data
-output_file_path = r"C:\Users\ulens\git_hub\tangency_portfolio\data\cleaned_synthetic_price_data.csv"
+output_file_path = r"cleaned_synthetic_price_data.csv"
 df.to_csv(output_file_path, index=False)
 
-print("✅ Synthetic price data cleaned and saved as 'cleaned_synthetic_price_data.csv'.")
+print("Synthetic price data cleaned and saved as 'cleaned_synthetic_price_data.csv'.")
 print("Missing values after cleaning:\n", df.isnull().sum())
