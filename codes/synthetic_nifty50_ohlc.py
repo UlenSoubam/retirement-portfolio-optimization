@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load the cleaned synthetic stock price data to align dates
-stock_price_data = pd.read_csv(r"C:\Users\ulens\git_hub\tangency_portfolio\data\cleaned_synthetic_price_data.csv")
+stock_price_data = pd.read_csv("cleaned_synthetic_price_data.csv")
 
 # Extract unique dates from stock data
 unique_dates = pd.to_datetime(stock_price_data["date"]).sort_values().unique()
@@ -39,5 +39,5 @@ nifty_df = pd.DataFrame(nifty_data, columns=["date", "open", "high", "low", "clo
 # Save to CSV
 nifty_df.to_csv("synthetic_nifty50_ohlc.csv", index=False)
 
-print("✅ Synthetic NIFTY 50 OHLC Data Generated Successfully!")
+print("Synthetic NIFTY 50 OHLC Data Generated Successfully!")
 print(nifty_df.head())
