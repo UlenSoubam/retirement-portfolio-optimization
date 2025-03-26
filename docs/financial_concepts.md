@@ -124,29 +124,99 @@ These measure operational efficiency.
 
 ### **5. Risk & Return Ratios – “How does the company perform against risk?”**  
 
-- **Beta:** Measures stock volatility relative to the market.  
-  - Formula:  
-    
-    β = Covariance (r_stock, r_market) / Variance (r_market)
-     
-  - *Use case:* High-beta stocks (e.g., tech) are riskier but offer higher returns.  
+## 1. **Beta (β)**
+### Definition
+Measures the sensitivity of a stock's returns to market movements. A beta of 1 indicates the stock moves in tandem with the market, >1 means higher volatility than the market, and <1 means lower volatility.
 
-- **Sharpe Ratio:** Measures risk-adjusted returns.  
-  - Formula:  
-    
-    Sharpe Ratio = (Portfolio Return - Risk-Free Rate) / Portfolio Standard Deviation
-     
-  - *Use case:* If two portfolios have the same return, the one with the higher Sharpe Ratio is **better**.  
+### Formula
+```math
+\beta = \frac{\text{Cov}(R_i, R_m)}{\text{Var}(R_m)}
+```
+where:
+- \( R_i \) = Return of the asset
+- \( R_m \) = Return of the market
 
-- **Sortino Ratio:** Like Sharpe, but focuses only on downside risk.  
-  - Formula:  
-    
-    Sortino Ratio = (Portfolio Return - Risk-Free Rate) / Downside Deviation
-      
-  - *Use case:* Used by hedge funds managing risk-averse investors’ money.  
+### Thresholds
+- \( \beta < 0 \) : Inversely correlated with the market (e.g., gold)
+- \( 0 < \beta < 1 \) : Less volatile than the market (e.g., utilities)
+- \( \beta = 1 \) : Moves with the market (e.g., index fund)
+- \( \beta > 1 \) : More volatile than the market (e.g., tech stocks)
 
-- **Max Drawdown:** Measures the worst peak-to-trough loss in a portfolio.  
-  - *Use case:* Essential in stress-testing investment strategies.  
+## 2. **Sharpe Ratio**
+### Definition
+Measures risk-adjusted return, considering total risk (standard deviation).
+
+### Formula
+```math
+S = \frac{R_p - R_f}{\sigma_p}
+```
+where:
+- \( R_p \) = Portfolio return
+- \( R_f \) = Risk-free rate
+- \( \sigma_p \) = Portfolio standard deviation
+
+### Thresholds
+- **< 1** : Poor
+- **1 - 2** : Acceptable
+- **2 - 3** : Good
+- **> 3** : Excellent
+
+---
+
+## 3. **Sortino Ratio**
+### Definition
+Similar to Sharpe but considers downside risk (negative volatility) only.
+
+### Formula
+```math
+S_{sortino} = \frac{R_p - R_f}{\sigma_d}
+```
+where:
+- \( \sigma_d \) = Downside deviation (only considers negative returns)
+
+### Thresholds
+- **< 1** : Poor
+- **1 - 2** : Acceptable
+- **2 - 3** : Good
+- **> 3** : Excellent
+
+---
+
+## 4. **Treynor Ratio**
+### Definition
+Measures excess return per unit of systematic risk (beta).
+
+### Formula
+```math
+T = \frac{R_p - R_f}{\beta_p}
+```
+where:
+- \( \beta_p \) = Portfolio beta
+
+### Thresholds
+- Higher Treynor ratio = Better risk-adjusted return (relative to beta)
+- Used for comparing portfolios with similar market exposure
+
+---
+
+## 5. **Maximum Drawdown (MDD)**
+### Definition
+Measures the maximum loss from a peak to a trough before a new peak is attained. It helps assess downside risk and worst-case performance.
+
+### Formula
+```math
+MDD = \frac{\max (P_t) - \min (P_t)}{\max (P_t)}
+```
+where:
+- \( P_t \) = Portfolio value at time \( t \)
+- \( \max (P_t) \) = Peak value before drawdown
+- \( \min (P_t) \) = Lowest value during the drawdown period
+
+### Thresholds
+- **< -50%** : Highly risky
+- **-30% to -50%** : Risky
+- **-10% to -30%** : Moderate risk
+- **>-10%** : Low risk
 
 ---
 
@@ -214,7 +284,7 @@ If an investment grows from **₹10,000** to **₹25,000** in **5 years**:
 
 ---  
 
-## **2️⃣ How Do They Relate to Each Other?**  
+## **How Do They Relate to Each Other?**  
 - **CAGR vs. Annualized Return**  
   - CAGR is **more accurate** because it assumes compounding; annualized return is just an average.  
 
@@ -229,7 +299,7 @@ If an investment grows from **₹10,000** to **₹25,000** in **5 years**:
 
 ---  
 
-## **3️⃣ Conclusion: Which One to Use?**  
+## **Which One to Use?**  
 - If you want to **compare different investments** → **CAGR, Sharpe Ratio, Treynor Ratio**.  
 - If you focus on **risk-adjusted performance** → **Sortino Ratio, Max Drawdown**.  
 - If you care about **short-term trading** → **Daily Return, Volatility**.  
@@ -239,22 +309,21 @@ Each metric tells a **different story**, and a smart investor **combines them** 
 ---  
 
 
+# Expected Annual Return & Covariance Matrices
 
-# 📌 Expected Annual Return & Covariance Matrices
-
-## **1️⃣ Expected Annual Return**
+## **1️ Expected Annual Return**
 
 ### **🔹 What is Expected Annual Return?**
 The **Expected Annual Return (EAR)** is a **forward-looking metric** that estimates the **average return** an investment is likely to generate over one year **based on historical data and probability distributions**. Unlike **CAGR** (which is a backward-looking measure of past performance), EAR tries to **predict future returns** using probability-weighted scenarios.
 
 ### **🔹 Formula for Expected Annual Return**
-```
+
 E(R) = Σ [P_i × R_i]
-```
+
 Where:
-- `E(R)` = Expected Annual Return
-- `P_i` = Probability of scenario `i`
-- `R_i` = Return in scenario `i`
+- E(R) = Expected Annual Return
+- P_i = Probability of scenario i
+- R_i = Return in scenario`i
 
 ### **🔹 How is it Different from Other Return Metrics?**
 
@@ -273,9 +342,9 @@ A stock has the following projected return scenarios:
 - 20% probability of returning **-3%**
 
 The Expected Annual Return is:
-```
+
 E(R) = (0.3 × 12%) + (0.5 × 8%) + (0.2 × -3%) = 6.6%
-```
+
 So, based on probabilities, we expect the stock to return **6.6% per year**.
 
 ### **🔹 Why Does It Matter?**
@@ -285,19 +354,19 @@ So, based on probabilities, we expect the stock to return **6.6% per year**.
 
 ---
 
-## **2️⃣ Covariance Matrices**
+## **2️ Covariance Matrices**
 
 ### **🔹 What is a Covariance Matrix?**
 A **covariance matrix** measures how multiple assets in a portfolio move **relative to each other**. It tells us whether stocks tend to rise or fall **together** (positive correlation) or **in opposite directions** (negative correlation).
 
 ### **🔹 Formula for Covariance**
-```
+
 Cov(X, Y) = Σ [(X_i - X̄) * (Y_i - Ȳ)] / (N - 1)
-```
+
 Where:
-- `X_i, Y_i` are returns of assets X and Y
-- `X̄, Ȳ` are average returns
-- `N` is the number of periods
+- X_i, Y_i are returns of assets X and Y
+- X̄, Ȳ are average returns
+- N is the number of periods
 
 A **Covariance Matrix** extends this to **multiple assets** in a portfolio:
 
@@ -314,7 +383,7 @@ A **Covariance Matrix** extends this to **multiple assets** in a portfolio:
 
 ---
 
-## **3️⃣ How Expected Return and Covariance Matrices Relate to Each Other**
+## **3️ How Expected Return and Covariance Matrices Relate to Each Other**
 
 - **Expected Return tells us how much we might earn**, while **covariance tells us how risky our portfolio is**.
 - Together, they help in constructing an **optimal portfolio** by balancing **returns vs. risk**.
@@ -322,16 +391,16 @@ A **Covariance Matrix** extends this to **multiple assets** in a portfolio:
 
 ---
 
-## **4️⃣ Conclusion**
+## **Key takeaways** 
 - **Expected Annual Return** helps investors **forecast** future returns based on probabilities.
 - **Covariance Matrices** help measure **risk** and **diversification potential**.
 - Both are **essential for portfolio construction**, **risk management**, and **financial modeling**.
 
-🚀 **Question for you:** How do you think investors should use Expected Annual Return when constructing a long-term portfolio?
+ **Question for you:** How do you think investors should use Expected Annual Return when constructing a long-term portfolio?
 
 ---
 
-# 📌 What is Monte Carlo Simulation?
+#  What is Monte Carlo Simulation?
 Monte Carlo Simulation is a **mathematical technique** that allows us to **model uncertainty** by running **thousands (or millions) of random simulations** to predict possible outcomes in financial markets, investments, and risk assessments.
 
 In simple terms, it helps answer:
@@ -343,7 +412,7 @@ It is particularly useful in finance because **markets are uncertain, and we can
 
 ---
 
-## 📌 How Does Monte Carlo Simulation Work?
+## How Does Monte Carlo Simulation Work?
 Monte Carlo Simulation follows these steps:
 
 1. **Define the Financial Model**  
@@ -369,7 +438,7 @@ Monte Carlo Simulation follows these steps:
 
 ---
 
-## 📌 Monte Carlo in Financial Applications
+## Monte Carlo in Financial Applications
 Monte Carlo Simulation is used in various areas of finance:
 
 1. **Portfolio Risk Analysis**  
@@ -387,7 +456,7 @@ Monte Carlo Simulation is used in various areas of finance:
 
 ---
 
-## 📌 Example: Monte Carlo for Stock Price Prediction
+## Example: Monte Carlo for Stock Price Prediction
 Imagine you want to predict the future price of a stock currently trading at **₹100**.  
 - You assume an **expected return of 10%** and **volatility of 20%**.
 - You run **10,000 simulations** of random possible future prices.
@@ -412,7 +481,7 @@ This helps investors make **data-driven decisions** about risk and return.
 
 ---
 
-## 📌 Monte Carlo vs. Deterministic Models
+## Monte Carlo vs. Deterministic Models
 | **Feature**                | **Monte Carlo Simulation** | **Deterministic Models** |
 |----------------------------|---------------------------|-------------------------|
 | **Outcome Type**           | Multiple possible outcomes | Single fixed outcome |
@@ -422,15 +491,15 @@ This helps investors make **data-driven decisions** about risk and return.
 
 ---
 
-## 📌 Conclusion
+## **Key takeaways** 
 Monte Carlo Simulation is **a powerful tool for handling financial uncertainty**. By running thousands of simulations, we can:
-✅ Predict **future stock prices & portfolio returns**  
-✅ Understand **risk exposure**  
-✅ Make **better investment decisions**  
+- Predict **future stock prices & portfolio returns**  
+- Understand **risk exposure**  
+- Make **better investment decisions**  
 
 ---
 
-# 📌 **Modern Portfolio Theory (MPT)**
+# **Modern Portfolio Theory (MPT)**
 Modern Portfolio Theory (MPT), developed by **Harry Markowitz** in 1952, is a **framework for constructing an investment portfolio that maximizes expected return for a given level of risk**.
 
 ### **Key Idea:**
@@ -444,7 +513,7 @@ Modern Portfolio Theory (MPT), developed by **Harry Markowitz** in 1952, is a **
 
 ---
 
-# 📌 **Mean-Variance Optimization (MVO)**
+# **Mean-Variance Optimization (MVO)**
 At the core of MPT is **Mean-Variance Optimization (MVO)**, a **mathematical method** used to construct the best-performing portfolio by balancing **expected return (mean) and risk (variance)**.
 
 ### **How MVO Works:**
@@ -466,7 +535,7 @@ Where:
 
 ---
 
-# 📌 **Efficient Frontier**
+# **Efficient Frontier**
 The **Efficient Frontier** is the **set of all optimal portfolios that offer the highest expected return for a given level of risk**.
 
 ### **Key Insights:**
@@ -475,13 +544,13 @@ The **Efficient Frontier** is the **set of all optimal portfolios that offer the
 - The **leftmost point of the frontier** is the **Minimum Variance Portfolio (MVP)** – the portfolio with the **lowest risk**.
 
 ### **Graphically:**
-📈 **X-axis** = Risk (Standard Deviation, \(\sigma\))  
-📈 **Y-axis** = Expected Return (\(\mu\))  
+**X-axis** = Risk (Standard Deviation, \(\sigma\))  
+**Y-axis** = Expected Return (\(\mu\))  
 The **curve of the Efficient Frontier** shows the best possible portfolios.
 
 ---
 
-# 📌 **Capital Market Line (CML)**
+# **Capital Market Line (CML)**
 The **Capital Market Line (CML)** extends the Efficient Frontier by introducing a **risk-free asset** (like Treasury Bills).
 
 ### **Key Idea:**
@@ -505,7 +574,7 @@ Where:
 
 ---
 
-# 📌 **Tangency Portfolio (Market Portfolio)**
+# **Tangency Portfolio (Market Portfolio)**
 The **Tangency Portfolio** is the **point where the CML touches the Efficient Frontier**.
 
 ### **Key Features:**
@@ -515,7 +584,7 @@ The **Tangency Portfolio** is the **point where the CML touches the Efficient Fr
 
 ---
 
-# 📌 **How These Concepts Relate**
+# **How These Concepts Relate**
 
 | **Concept**               | **What It Represents** |
 |---------------------------|-----------------------|
@@ -527,16 +596,16 @@ The **Tangency Portfolio** is the **point where the CML touches the Efficient Fr
 
 ---
 
-# 📌 **Conclusion**
-✅ **Modern Portfolio Theory (MPT)** helps investors build **efficient, diversified portfolios**.  
-✅ **Mean-Variance Optimization (MVO)** finds the best combination of assets.  
-✅ The **Efficient Frontier** shows the **best possible risk-return tradeoff**.  
-✅ The **Capital Market Line (CML)** improves returns by adding **risk-free assets**.  
-✅ The **Tangency Portfolio** is the **best risky portfolio to invest in**.  
+# **Conclusion**
+ **Modern Portfolio Theory (MPT)** helps investors build **efficient, diversified portfolios**.  
+**Mean-Variance Optimization (MVO)** finds the best combination of assets.  
+ The **Efficient Frontier** shows the **best possible risk-return tradeoff**.  
+ The **Capital Market Line (CML)** improves returns by adding **risk-free assets**.  
+ The **Tangency Portfolio** is the **best risky portfolio to invest in**.  
 
 ---
 
-# 📌 **Fundamental Statistical Concepts in Finance**  
+# **Fundamental Statistical Concepts in Finance**  
 
 Finance relies heavily on **statistical methods** to analyze data, manage risk, and make decisions. The following concepts are **fundamental** for anyone in finance.  
 
@@ -546,7 +615,7 @@ Finance relies heavily on **statistical methods** to analyze data, manage risk, 
 Financial data follows **different types of distributions**, and understanding them is crucial for risk modeling and pricing financial instruments.  
 
 ### **Key Distributions:**
-- **Normal Distribution (Gaussian Distribution)** 📈  
+- **Normal Distribution (Gaussian Distribution)**   
   - Used for modeling **stock returns, asset prices, and risk**.  
   - Defined by **mean (μ)** and **standard deviation (σ)**.  
   - **Limitation:** Real-world returns have **fat tails** (extreme events happen more often than predicted).  
@@ -676,16 +745,16 @@ Regression helps **quantify relationships** between financial variables.
 
 ---
 
-# 📌 **Final Thoughts**  
-✅ **Probability & distributions** help in risk modeling.  
-✅ **Descriptive statistics** summarize financial data.  
-✅ **Correlation & covariance** are key for diversification.  
-✅ **Time series analysis** helps in market forecasting.  
-✅ **Hypothesis testing** ensures strategies are valid.  
-✅ **Regression analysis** helps in return prediction.  
-✅ **Risk metrics & volatility models** are critical in **risk management**.  
+# **Key takeaways**  
+**Probability & distributions** help in risk modeling.  
+**Descriptive statistics** summarize financial data.  
+**Correlation & covariance** are key for diversification.  
+**Time series analysis** helps in market forecasting.  
+**Hypothesis testing** ensures strategies are valid.  
+**Regression analysis** helps in return prediction.  
+**Risk metrics & volatility models** are critical in **risk management**.  
 
-🚀 **Mastering these concepts will make you a top-tier financial professional!** Which of these would you like to explore further? 🔥  
+  
 
 
 
