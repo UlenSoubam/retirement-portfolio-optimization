@@ -107,10 +107,11 @@ This project follows Google's Data Analytics Process (APPASA):
 ---
 
 ## 6️ ACT: Key Decisions & Future Improvements
-✅ **Adjust sector diversification & rebalancing strategy**
-✅ **Incorporate macroeconomic indicators for better adaptability**
-✅ **Explore alternative optimization techniques (e.g., Black-Litterman Model)**
-✅ **Develop an interactive dashboard using Streamlit/Tableau**
+- **Adjust sector diversification & rebalancing strategy**
+- **Incorporate macroeconomic indicators for better adaptability**
+- **Use actual real world data**
+- **Explore alternative optimization techniques (e.g., Ggeometric Brownian Motion, Black-Litterman Model)**
+- **Develop an interactive dashboard using Streamlit/Tableau**
 
 ---
 
