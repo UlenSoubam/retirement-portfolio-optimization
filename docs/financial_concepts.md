@@ -447,74 +447,6 @@ Monte Carlo Simulation (MCS) is a **powerful statistical technique** used in fin
 - Predicts **GDP growth, inflation, and investment returns** under uncertainty.  
 - Evaluates **capital investment projects** using **Net Present Value (NPV) simulations**.  
 
----
-
-## Monte Carlo Simulation follows these steps:
-
-## 🔹 Step 1: Define the Problem  
-- Identify the **financial metric** to simulate (e.g., **portfolio return, stock price, option value**).  
-- Determine the **time horizon** (e.g., 1 year, 10 years, 25 years).  
-
-## 🔹 Step 2: Determine Input Variables & Probability Distributions  
-- Identify key inputs:  
-  - **Expected returns** \( \mu \) : Historical mean return of assets.  
-  - **Volatility** \( \sigma \) : Standard deviation of returns.  
-  - **Risk-free rate** \( r_f \) : Benchmark yield for risk-adjusted returns.  
-- Assign probability distributions:  
-  - **Normal distribution** for asset returns.  
-  - **Log-normal distribution** for stock prices.  
-  - **Poisson distribution** for rare market shocks.  
-
-## 🔹 Step 3: Generate Random Samples  
-- Use **random number generation** to simulate financial scenarios.  
-- Apply **Geometric Brownian Motion (GBM)** to model stock prices:  
-```math
-  \[
-  S_t = S_{t-1} \times e^{(\mu - \frac{\sigma^2}{2}) \Delta t + \sigma \epsilon \sqrt{\Delta t}}
-  \]
-```
-  Where:  
-  - \( S_t \) = Stock price at time \( t \)  
-  - \( \mu \) = Expected return  
-  - \( \sigma \) = Volatility  
-  - \( \epsilon \) = Random shock (\( \sim N(0,1) \))  
-  - \( \Delta t \) = Time step  
-
-## 🔹 Step 4: Simulate the Model  
-- **Run thousands (or millions) of simulations** to generate potential outcomes.  
-- Each iteration represents a **possible future scenario** based on sampled data.  
-
-## 🔹 Step 5: Analyze & Interpret Results  
-- Calculate key metrics:  
-  - **Expected return** \( \mathbb{E}[R] \) → Mean of simulated returns.  
-  - **Portfolio volatility** \( \sigma_p \) → Standard deviation of returns.  
-  - **Sharpe Ratio**:  
-    \[
-    SR = \frac{\mathbb{E}[R] - r_f}{\sigma_p}
-    \]
-  
-  - **Sortino Ratio** (focuses on downside risk):  
-    \[
-    Sortino = \frac{\mathbb{E}[R] - r_f}{\sigma_d}
-    \]
-    where \( \sigma_d \) is the standard deviation of negative returns.  
-  
-  - **Max Drawdown (MDD)** (worst-case loss scenario):  
-    \[
-    MDD = \frac{\max(P_t) - \min(P_t)}{\max(P_t)}
-    \]
-    where \( P_t \) is the portfolio value over time.  
-
-- **Visualizations**:  
-  - **Histograms** of simulated returns.  
-  - **Cumulative Distribution Functions (CDFs)** for probability analysis.  
-  - **Monte Carlo Efficient Frontier** for portfolio optimization.  
-
-## 🔹 Step 6: Make Informed Decisions  
-- Use **probabilistic insights** to guide investments:  
-  - Adjust **portfolio weights** for optimal risk-adjusted returns.  
-  - Estimate **probability of achieving a target CAGR** (e.g., 12% over 25 years).  
-  - Assess **downside risk** using **Value-at-Risk (VaR)**.  
 
 ---
 
@@ -604,12 +536,16 @@ At the core of MPT is **Mean-Variance Optimization (MVO)**, a **mathematical met
 4. **Optimal Portfolio Allocation**: MVO calculates **weights of assets** that give the best return for the lowest risk.
 
 **Mathematical Objective:**
+```math
 \[
 \min \sigma_p^2 = \sum w_i w_j \sigma_{ij}
 \]
+```
+```math
 \[
 \max \mu_p = \sum w_i \mu_i
 \]
+```
 Where:
 - \(w_i\) = weight of asset \(i\)
 - \(\sigma_{ij}\) = covariance between assets \(i\) and \(j\)
@@ -639,9 +575,11 @@ The **Capital Market Line (CML)** extends the Efficient Frontier by introducing 
 - The CML is the **best risk-return tradeoff line in the market**.
 
 **Formula for CML:**
+```math
 \[
 E(R_p) = R_f + \frac{E(R_m) - R_f}{\sigma_m} \times \sigma_p
 \]
+```
 Where:
 - \(E(R_p)\) = Expected return of the portfolio
 - \(R_f\) = Risk-free rate
@@ -785,10 +723,12 @@ Regression helps **quantify relationships** between financial variables.
 ### **Types of Regression:**
 - **Linear Regression**:  
   - Used to **predict stock returns based on market factors**.  
-  - Formula:  
+  - Formula:
+  ```math 
     \[
     Y = \beta_0 + \beta_1X + \varepsilon
     \]
+  ```
 - **Multiple Regression**:  
   - Used in **factor models like the Fama-French Three-Factor Model**.  
 - **Logistic Regression**:  
