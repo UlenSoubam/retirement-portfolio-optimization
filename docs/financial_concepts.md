@@ -170,18 +170,18 @@ These measure operational efficiency.
 - **CAGR (Compound Annual Growth Rate)**  
   - Formula:  
     
-    \[
-    CAGR = \left( \frac{Ending\ Value}{Beginning\ Value} \right)^{\frac{1}{Years}} - 1
-    \]
+CAGR = (EV ÷ BV)^(1/n) - 1
+Where:  
+- **EV** = Ending Value (Final Investment Value)  
+- **BV** = Beginning Value (Initial Investment)  
+- **n** = Number of Years 
   
-  - Example:  
-    - If ₹1,000 grows to ₹1,500 in 5 years,  
-      
-      \[
-      CAGR = \left( \frac{1500}{1000} \right)^{\frac{1}{5}} -1 = 8.45\%
-      \]
+  - Example:
+If an investment grows from **₹10,000** to **₹25,000** in **5 years**:
+      CAGR = (25000 / 10000)^(1/5) - 1 CAGR = (2.5)^(0.2) - 1 CAGR = 1.2009 - 1 CAGR = 0.2009 or 20.09%
+  - This means the investment grew at an **average annual rate of 20.09%** over 5 years.
+  - More accurate than Annualized Return because it considers **compounding**.
   
-  - More accurate than Annualized Return because it considers **compounding**.  
 
 - **XIRR (Extended Internal Rate of Return)**  
   - Used when **cash flows are irregular** (e.g., SIPs, withdrawals).  
